@@ -8,12 +8,11 @@
 import Foundation
 
 
-final class NetoworkManager {
-    static let shared = NetoworkManager()
-    private let baseURL = "https://jsonplaceholder.org/posts"
+struct EventsService: EventsNetworkService {
+    private let baseURL = "https://jsonplaceholder.org/"
     
     func getEvents() async throws -> [Event] {
-        guard let url = URL(string: baseURL) else {
+        guard let url = URL(string: baseURL + "posts") else {
             throw APIError.invalidURL
         }
         let urlRequest = URLRequest(url: url)
@@ -33,8 +32,11 @@ final class NetoworkManager {
     }
 }
 
+protocol EventsNetworkService {
+    func getEvents() async throws -> [Event]
+}
 
-enum APIError: Error {
+enum APIError: Error, LocalizedError {
     case invalidURL
     case generic(error: Error)
     case invalidResponse

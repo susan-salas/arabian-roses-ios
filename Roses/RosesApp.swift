@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct RosesApp: App {
+    
+    let container: ModelContainer
+    
     var body: some Scene {
         WindowGroup {
-            EventsListView()
+            EventsListView(modelContext: container.mainContext, networkService: EventsService())
         }
     }
+    init() {
+            do {
+                container = try ModelContainer(for: Event.self)
+            } catch {
+                fatalError("Failed to create ModelContainer for Events.")
+            }
+        }
 }

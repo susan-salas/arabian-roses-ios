@@ -8,15 +8,28 @@
 import Foundation
 import SwiftData
 
-struct Event: Decodable, Identifiable {
+@Model
+class Event: Decodable, Identifiable {
     let title: String
     let image: String
     let content: String
     let id: Int
-}
-
-struct MockData {
-    static let samplePost = Event(title: "Technique Class", image: "PHOTO-2024-01-22-20-40-29", content: "Despriction: Open technique classes with Yesenia! We'll be working on Hagala drills and variations, pop-and-lock polishing, muscle-building exercises and advanced viel tricks.", id: 1)
     
-    static let posts = [samplePost, samplePost, samplePost, samplePost]
+    enum CodingKeys: String, CodingKey {
+        case title
+        case image
+        case content
+        case id
+    }
+    
+    //need custom init due to @Model macro - not needed for nonpersisted models
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.title = try container.decode(String.self, forKey: .title)
+        self.image = try container.decode(String.self, forKey: .image)
+        self.content = try container.decode(String.self, forKey: .content)
+        self.id = try container.decode(Int.self, forKey: .id)
+    }
+    
+    
 }

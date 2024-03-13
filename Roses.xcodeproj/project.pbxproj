@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36A5B8712B9FFD3400586F3D /* EventsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 36A5B86F2B9FFD3400586F3D /* EventsContainer.xcdatamodeld */; };
 		36A5B8742BA0B53900586F3D /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A5B8732BA0B53800586F3D /* EventView.swift */; };
 		36A5B8762BA0B57400586F3D /* CaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A5B8752BA0B57400586F3D /* CaptionView.swift */; };
 		36D191D72B9D0E8200D3E201 /* RosesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D191D62B9D0E8200D3E201 /* RosesApp.swift */; };
@@ -18,7 +17,7 @@
 		36D191F42B9D0E8400D3E201 /* RosesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D191F32B9D0E8400D3E201 /* RosesUITestsLaunchTests.swift */; };
 		36D192012B9E43AB00D3E201 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D192002B9E43AB00D3E201 /* Event.swift */; };
 		36D192052B9E443A00D3E201 /* EventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D192042B9E443A00D3E201 /* EventsListView.swift */; };
-		36D192072B9EC32400D3E201 /* NetoworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D192062B9EC32400D3E201 /* NetoworkManager.swift */; };
+		36D192072B9EC32400D3E201 /* EventsNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D192062B9EC32400D3E201 /* EventsNetworkService.swift */; };
 		36D192092B9F7CEE00D3E201 /* EventsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D192082B9F7CEE00D3E201 /* EventsListViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36A5B8702B9FFD3400586F3D /* EventsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventsContainer.xcdatamodel; sourceTree = "<group>"; };
 		36A5B8732BA0B53800586F3D /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		36A5B8752BA0B57400586F3D /* CaptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionView.swift; sourceTree = "<group>"; };
+		36A5B87A2BA1FF5800586F3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		36D191D32B9D0E8200D3E201 /* Roses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36D191D62B9D0E8200D3E201 /* RosesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosesApp.swift; sourceTree = "<group>"; };
 		36D191DA2B9D0E8400D3E201 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,7 +53,7 @@
 		36D191F32B9D0E8400D3E201 /* RosesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		36D192002B9E43AB00D3E201 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		36D192042B9E443A00D3E201 /* EventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListView.swift; sourceTree = "<group>"; };
-		36D192062B9EC32400D3E201 /* NetoworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetoworkManager.swift; sourceTree = "<group>"; };
+		36D192062B9EC32400D3E201 /* EventsNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsNetworkService.swift; sourceTree = "<group>"; };
 		36D192082B9F7CEE00D3E201 /* EventsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +95,7 @@
 		36A5B8772BA0B58400586F3D /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				36D192062B9EC32400D3E201 /* NetoworkManager.swift */,
+				36D192062B9EC32400D3E201 /* EventsNetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -140,12 +139,12 @@
 		36D191D52B9D0E8200D3E201 /* Roses */ = {
 			isa = PBXGroup;
 			children = (
+				36A5B87A2BA1FF5800586F3D /* Info.plist */,
 				36D191D62B9D0E8200D3E201 /* RosesApp.swift */,
 				36A5B8782BA0B59700586F3D /* Model */,
 				36A5B8722BA0B50600586F3D /* Views */,
 				36A5B8792BA0B5A200586F3D /* ViewModels */,
 				36A5B8772BA0B58400586F3D /* Network */,
-				36A5B86F2B9FFD3400586F3D /* EventsContainer.xcdatamodeld */,
 				36D191DA2B9D0E8400D3E201 /* Assets.xcassets */,
 				36D191DC2B9D0E8400D3E201 /* Preview Content */,
 			);
@@ -307,9 +306,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36D192072B9EC32400D3E201 /* NetoworkManager.swift in Sources */,
+				36D192072B9EC32400D3E201 /* EventsNetworkService.swift in Sources */,
 				36D192052B9E443A00D3E201 /* EventsListView.swift in Sources */,
-				36A5B8712B9FFD3400586F3D /* EventsContainer.xcdatamodeld in Sources */,
 				36D192092B9F7CEE00D3E201 /* EventsListViewModel.swift in Sources */,
 				36A5B8762BA0B57400586F3D /* CaptionView.swift in Sources */,
 				36D192012B9E43AB00D3E201 /* Event.swift in Sources */,
@@ -481,9 +479,10 @@
 				DEVELOPMENT_TEAM = VJM86CJSEK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Roses/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -510,9 +509,10 @@
 				DEVELOPMENT_TEAM = VJM86CJSEK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Roses/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -644,19 +644,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		36A5B86F2B9FFD3400586F3D /* EventsContainer.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				36A5B8702B9FFD3400586F3D /* EventsContainer.xcdatamodel */,
-			);
-			currentVersion = 36A5B8702B9FFD3400586F3D /* EventsContainer.xcdatamodel */;
-			path = EventsContainer.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 36D191CB2B9D0E8200D3E201 /* Project object */;
 }

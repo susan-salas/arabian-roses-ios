@@ -17,6 +17,8 @@ struct EventView: View {
                     .scaledToFit()
             } placeholder: {
                 Image(systemName: "photo.artframe")
+                    .resizable()
+                    .scaledToFit()
             }
             CaptionView(title: event.title, description: event.content)
         }
