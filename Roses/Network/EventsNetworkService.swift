@@ -9,10 +9,10 @@ import Foundation
 
 
 struct EventsService: EventsNetworkService {
-    private let baseURL = "https://jsonplaceholder.org/"
+    private let baseURL = "https://x8ki-letl-twmt.n7.xano.io/api:5v39zU0d/"
     
     func getEvents() async throws -> [Event] {
-        guard let url = URL(string: baseURL + "posts") else {
+        guard let url = URL(string: baseURL + "event") else {
             throw APIError.invalidURL
         }
         let urlRequest = URLRequest(url: url)

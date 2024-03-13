@@ -20,7 +20,7 @@ struct EventView: View {
                     .resizable()
                     .scaledToFit()
             }
-            CaptionView(title: event.title, description: event.content)
+            CaptionView(title: event.title, description: event.content, location: event.location, date: event.date)
         }
     }
 }
